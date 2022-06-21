@@ -14,12 +14,12 @@ app = Flask(__name__)
 
 # 로그인 화면
 @app.route('/lggin', methods=["GET"])
-def home():
+def lggin():
     return render_template('lggin.html')
 
 # 회원가입 화면
 @app.route('/signup', methods=["GET"])
-def home():
+def signup():
     return render_template('signup.html')
 
 # 메인화면 - 카테고리
@@ -29,8 +29,13 @@ def home():
 
 # 자격증 세부정보
 @app.route('/certificateDetails', methods=["GET"])
-def home():
+def certificate_Details():
     return render_template('certificateDetails.html')
+
+# 자격증 세부정보 가져오기
+@app.route('/certificateDetails/get_detail')
+def get_certificate_Details():
+    return 0
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
