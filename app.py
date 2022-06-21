@@ -12,11 +12,25 @@ app = Flask(__name__)
 # ID = os.environ.get('DB_ID')
 # PW = os.environ.get('DB_PW')
 
+# 로그인 화면
+@app.route('/lggin', methods=["GET"])
+def home():
+    return render_template('lggin.html')
 
-#index handler start
+# 회원가입 화면
+@app.route('/signup', methods=["GET"])
+def home():
+    return render_template('signup.html')
+
+# 메인화면 - 카테고리
 @app.route('/', methods=["GET"])
 def home():
     return render_template('index.html')
+
+# 자격증 세부정보
+@app.route('/certificateDetails', methods=["GET"])
+def home():
+    return render_template('certificateDetails.html')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
