@@ -31,3 +31,6 @@
 
 # 5. public github repo 주소
 > * https://github.com/ikohong88/semoja
+
+# 6. 2022.06.21 수정사항
+> * 각자의 로컬영역에서 코드를 작성해서 합치기 >> Github 사용을 통한 협업 진행
